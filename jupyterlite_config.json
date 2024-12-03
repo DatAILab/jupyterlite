@@ -1,9 +1,8 @@
 {
-  "jupyter-config-data": {
-    "server": {
-      "contents": {
-        "baseUrl": "/files"
-      }
+  "contents": [
+    {
+      "name": "files",
+      "path": "files"
     }
-  }
+  ]
 }
