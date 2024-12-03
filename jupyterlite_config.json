@@ -1,0 +1,10 @@
+{
+  "jupyter-config-data": {
+    "disabledExtensions": [],
+    "settings": {
+      "terminal": {
+        "enabled": false
+      }
+    }
+  }
+}
