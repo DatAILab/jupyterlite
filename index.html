@@ -4,9 +4,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JupyterLite</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@jupyterlite/core@0.1.0/dist/index.css">
+    <script type="application/javascript">
+      window.JupyterLiteConfig = {
+        // Set the base URL for the JupyterLite environment
+        "notebook": {
+          "path": "files/example.ipynb"  // Path to the notebook file in the 'files' directory
+        },
+        // Optional: Specify the filesystem configuration
+        "filesystem": {
+          "root": "/"
+        }
+      };
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/@jupyterlite/core@0.1.0/dist/index.js"></script>
 </head>
 <body>
     <h1>Welcome to JupyterLite!</h1>
-    <p>Click <a href="?path=files/example.ipynb">Click here to open the example notebook in JupyterLite.</a></p>
+    <p>
+      Click <a href="#" id="open-notebook-link">here</a> to open the example notebook in JupyterLite.
+    </p>
+
+    <script>
+      // Dynamically open the notebook when the link is clicked
+      document.getElementById("open-notebook-link").addEventListener("click", function(event) {
+        event.preventDefault();
+        window.JupyterLiteConfig.notebook = { path: "files/example.ipynb" };  // Set notebook path dynamically
+        window.location.reload();  // Reload to open the notebook
+      });
+    </script>
 </body>
 </html>
