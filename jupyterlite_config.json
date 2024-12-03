@@ -1,9 +1,8 @@
 {
   "jupyter-config-data": {
-    "disabledExtensions": [],
-    "settings": {
-      "terminal": {
-        "enabled": false
+    "server": {
+      "contents": {
+        "baseUrl": "/files"
       }
     }
   }
