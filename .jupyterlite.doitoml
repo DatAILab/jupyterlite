@@ -1,0 +1,7 @@
+[lite]
+contents = "files"
+output_dir = "_output"
+
+[[lite.contents]]
+from = "files"
+to = "files"
